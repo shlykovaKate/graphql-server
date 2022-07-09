@@ -1,0 +1,30 @@
+{
+  "name": "graphql-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shlykovaKate/graphql-server.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shlykovaKate/graphql-server/issues"
+  },
+  "homepage": "https://github.com/shlykovaKate/graphql-server#readme",
+  "dependencies": {
+    "@graphql-tools/graphql-file-loader": "^7.4.0",
+    "@graphql-tools/load": "^7.7.0",
+    "apollo-server": "^3.9.0",
+    "axios": "^0.27.2",
+    "dotenv": "^16.0.1",
+    "graphql": "^16.5.0",
+    "nodemon": "^2.0.18"
+  }
+}
