@@ -26,28 +26,28 @@ export default {
     artists(parent) {
       const { artistsIds } = parent;
       return artistsIds && artistsIds.map(async (artistId) => {
-        const data = await getArtist(artistId);
+        const data = artistId && await getArtist(artistId);
         return data.data;
       });
     },
     bands(parent) {
       const { bandsIds } = parent;
       return bandsIds && bandsIds.map(async (bandId) => {
-        const data = await getBand(bandId);
+        const data = bandId && await getBand(bandId);
         return data.data;
       });
     },
     tracks(parent) {
       const { trackIds } = parent;
       return trackIds && trackIds.map(async (trackId) => {
-        const data = await getTrack(trackId);
+        const data = trackId && await getTrack(trackId);
         return data.data;
       });
     },
     genres(parent) {
       const { genresIds } = parent;
       return genresIds && genresIds.map(async (genreId) => {
-        const data = await getGenre(genreId);
+        const data = genreId && await getGenre(genreId);
         return data.data;
       });
     }

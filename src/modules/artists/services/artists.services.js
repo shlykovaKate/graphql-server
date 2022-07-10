@@ -13,8 +13,8 @@ axios.interceptors.response.use(function (response) {
   return response;
 });
 
-export const getAlbums = async (limit = 5, offset = 0) => {
-  return await axios.get('http://localhost:3005/v1/albums', {
+export const getArtists = async (limit = 5, offset = 0) => {
+  return await axios.get('http://localhost:3002/v1/artists', {
     params: {
       limit,
       offset
@@ -22,34 +22,34 @@ export const getAlbums = async (limit = 5, offset = 0) => {
   });
 };
 
-export const getAlbum = async (id) => {
+export const getArtist = async (id) => {
   try {
-    return await axios.get(`http://localhost:3005/v1/albums/${id}`);
+    return await axios.get(`http://localhost:3002/v1/artists/${id}`);
   } catch (err) {
     if (err.code === 'ERR_BAD_RESPONSE') {
-      return new Error("Album's id is wrong", "ERR_BAD_RESPONSE");
+      return new Error("Artist's id is wrong", "ERR_BAD_RESPONSE");
     }
   }
 };
 
-export const createAlbum = async (input, token) => {
-  return await axios.post('http://localhost:3005/v1/albums', input, {
+export const createArtist = async (input, token) => {
+  return await axios.post('http://localhost:3002/v1/artists', input, {
     headers: {
       Authorization: `Bearer ${token}`
     }
   });
 };
 
-export const updateAlbum = async (id, input, token) => {
-  return await axios.put(`http://localhost:3005/v1/albums/${id}`, input, {
+export const updateArtist = async (id, input, token) => {
+  return await axios.put(`http://localhost:3002/v1/artists/${id}`, input, {
     headers: {
       Authorization: `Bearer ${token}`
     }
   });
 };
 
-export const deleteAlbum = (id, token) => {
-  return axios.delete(`http://localhost:3005/v1/albums/${id}`, {
+export const deleteArtist = (id, token) => {
+  return axios.delete(`http://localhost:3002/v1/artists/${id}`, {
     headers: {
       Authorization: `Bearer ${token}`
     }
