@@ -1,17 +1,16 @@
 # graphql-server
 
-```
 ## Usage
 
 ```
-# Copy and rename env.example to .env
+### Copy and rename env.example to .env
 If needed apply changes in .env file.
 .env file have PORT variable (by default it's 4000)
 
-# Install dependencies
+### Install dependencies
 npm install
 
-# Run
+### Run
 npm run start
 
 ```
