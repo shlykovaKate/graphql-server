@@ -1,0 +1,30 @@
+type JWT {
+  jwt: String!
+}
+
+type User {
+    id: ID!
+    firstName: String!
+    lastName: String!
+    password: String!
+    email: String!
+}
+
+type Query {
+  jwt(email: String!, password: String!): JWT
+  user(id: ID!): User
+}
+
+type Mutation {
+  register(
+    firstName: String!
+    lastName: String!
+    password: String!
+    email: String!
+  ): User!
+}
+
+type Delete {
+  acknowledged: Boolean
+  deletedCount: Int
+}
